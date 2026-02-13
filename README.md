@@ -23,6 +23,15 @@ Change password immediately!
 ✅ Auto-detect new videos
 ✅ All formats supported (MP4, MKV, M3U8, etc)
 
+Modification Path:
+
+
+sudo nano /var/www/tv/scripts/autodj.php
+
+sudo nano /var/www/tv/public/settings.php
+
+sudo nano /var/www/tv/public/dashboard.php
+
 
 
 Login to your Ubuntu VPS and run:
