@@ -32,6 +32,28 @@ sudo nano /var/www/tv/public/settings.php
 
 sudo nano /var/www/tv/public/dashboard.php
 
+sudo nano /var/www/tv/scripts/autodj.php
+
+
+
+
+Restart Stream:
+-------------------------------------
+sudo chmod +x /var/www/tv/scripts/autodj.php
+sudo chown www-data:www-data /var/www/tv/scripts/autodj.php
+-------------------------------------
+
+sudo pkill -f autodj 2>/dev/null
+sudo pkill -f "ffmpeg.*stream" 2>/dev/null
+rm -f /tmp/autodj.lock /tmp/autodj_state.json
+rm -f /var/www/tv/hls/*.ts /var/www/tv/hls/*.m3u8
+
+--------------------------------------
+
+sudo bash /var/www/tv/scripts/start_stream.sh
+
+---------------------------------------------------
+
 
 
 Login to your Ubuntu VPS and run:
